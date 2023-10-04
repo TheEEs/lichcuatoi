@@ -1,1 +1,2 @@
-<%= ENV["RAILS_ENV"] %>
+<%= button_to "Sign in with Facebook", "/auth/facebook", method: :post %>
+<%= session[:user_id] %>
