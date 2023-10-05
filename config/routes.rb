@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'login', to: "login#index", as: :login
   get 'omniauth_callbacks/facebook'
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

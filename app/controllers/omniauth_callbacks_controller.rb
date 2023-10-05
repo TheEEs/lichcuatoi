@@ -7,7 +7,7 @@ class OmniauthCallbacksController < ApplicationController
       user.image = auth[:info][:image]
     end
     if user
-      session[:user_id] = user.uid
+      session[:user_uid] = user.uid
       redirect_to root_path
     end
   end
