@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clients
   get 'login', to: "login#index", as: :login
   get 'omniauth_callbacks/facebook'
   get 'home/index'
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   get "/auth/facebook/callback", to: "omniauth_callbacks#facebook"
+  post "/auth/developer/callback", to: "omniauth_callbacks#developer" unless Rails.env.production?
 end
