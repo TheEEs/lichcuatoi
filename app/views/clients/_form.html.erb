@@ -13,25 +13,25 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder: "Tên khách hàng" %>
   </div>
 
   <div>
     <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, placeholder: "Số điện thoại" %>
   </div>
 
   <div>
     <%= form.label :time, style: "display: block" %>
-    <%= form.datetime_field :time %>
+    <%= form.datetime_field :time, placeholder: "Thời gian" %>
   </div>
 
   <div>
     <%= form.label :note, style: "display: block" %>
-    <%= form.text_area :note %>
+    <%= form.text_area :note, placeholder: "Ghi chú" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Thêm mới" %>
   </div>
 <% end %>

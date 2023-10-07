@@ -1,7 +1,8 @@
 <h1>New client</h1>
 
-<%= render "form", client: @client %>
-
+<%= turbo_frame_tag Client.new do %>
+ <%= render "form", client: @client %>
+<% end %>
 <br>
 
 <div>
