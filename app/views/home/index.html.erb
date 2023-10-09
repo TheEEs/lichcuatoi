@@ -1,5 +1,7 @@
 <%= current_user.name %>
-
+<div id="flash">
+    <%= render "layouts/flash" %>
+</div>
 <%= turbo_frame_tag Client.new do %>
     <%= button_to "Khách hàng mới", new_client_path, method: :get %>
 <% end %>

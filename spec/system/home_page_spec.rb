@@ -4,11 +4,11 @@ include ApplicationHelper
 # OmniAuth.config.mock_auth[:facebook]
 RSpec.describe HomeController, type: :system do
   before do
-    driven_by :selenium, using: :headless_firefox
+    driven_by :cuprite
   end
 
   feature "omniauth-facebook" do
-    scenario "User visit homepage and see their user name", js: true do
+    scenario "User visit homepage and see their user name" do
       visit root_path
       if page.current_path == login_path
         click_button "Đăng nhập với Facebook"

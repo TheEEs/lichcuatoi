@@ -1,3 +1,5 @@
 <%= turbo_stream.replace Client.new do %>
     <%= button_to "Khách hàng mới", new_client_path, method: :get %>
 <% end %>
+
+<%= turbo_stream.prepend "flash", partial: "layouts/flash" %>
